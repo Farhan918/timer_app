@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning & Execution Timer</title>
+    <title>Learning Timer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
     
     <!-- PWA Meta Tags -->
-    <meta name="theme-color" content="#f5f5f7">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Track your learning and execution time">
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icon-192.png">
@@ -17,9 +18,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Learning & Execution Timer</h1>
+        <div class="notion-header">
+            <h1>KM's Learning & Execution Timer</h1>
+            <div class="notion-breadcrumb">
+                <span>Dashboard</span>
+                <span class="separator">/</span>
+                <span>Timer</span>
+            </div>
+        </div>
         
-        <div class="mode-toggle">
+        <div class="mode-toggle notion-block">
             <span class="mode-label">Weekday Mode</span>
             <label class="switch">
                 <input type="checkbox" id="mode-toggle">
@@ -28,32 +36,38 @@
             <span class="mode-label">Weekend Mode</span>
         </div>
 
-        <div class="timer-container">
+        <div class="timer-container notion-block">
             <div class="timer-display" id="current-timer">00:00:00</div>
         </div>
 
         <div class="sections">
-            <div class="section learning">
-                <h2>Learning</h2>
+            <div class="section learning notion-block">
+                <div class="notion-block-header">
+                    <h2>Learning</h2>
+                    <div class="notion-block-icon">📚</div>
+                </div>
                 <div class="time-display">
                     <div class="logged-time">Logged: <span id="learning-logged">00:00:00</span></div>
                     <div class="remaining-time">Remaining: <span id="learning-remaining">01:00:00</span></div>
                 </div>
                 <div class="buttons">
-                    <button id="learning-start">Start Learning</button>
-                    <button id="learning-stop" disabled>Stop</button>
+                    <button id="learning-start" class="notion-button">Start Learning</button>
+                    <button id="learning-stop" class="notion-button" disabled>Stop</button>
                 </div>
             </div>
 
-            <div class="section executing">
-                <h2>Executing</h2>
+            <div class="section executing notion-block">
+                <div class="notion-block-header">
+                    <h2>Executing</h2>
+                    <div class="notion-block-icon">⚡</div>
+                </div>
                 <div class="time-display">
                     <div class="logged-time">Logged: <span id="executing-logged">00:00:00</span></div>
                     <div class="remaining-time">Remaining: <span id="executing-remaining">01:00:00</span></div>
                 </div>
                 <div class="buttons">
-                    <button id="executing-start">Start Executing</button>
-                    <button id="executing-stop" disabled>Stop</button>
+                    <button id="executing-start" class="notion-button">Start Executing</button>
+                    <button id="executing-stop" class="notion-button" disabled>Stop</button>
                 </div>
             </div>
         </div>
