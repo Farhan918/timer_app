@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning & Execution Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Learning & Execution Timer</h1>
+        
+        <div class="mode-toggle">
+            <span class="mode-label">Weekday Mode</span>
+            <label class="switch">
+                <input type="checkbox" id="mode-toggle">
+                <span class="slider"></span>
+            </label>
+            <span class="mode-label">Weekend Mode</span>
+        </div>
+
+        <div class="timer-container">
+            <div class="timer-display" id="current-timer">00:00:00</div>
+        </div>
+
+        <div class="sections">
+            <div class="section learning">
+                <h2>Learning</h2>
+                <div class="time-display">
+                    <div class="logged-time">Logged: <span id="learning-logged">00:00:00</span></div>
+                    <div class="remaining-time">Remaining: <span id="learning-remaining">01:00:00</span></div>
+                </div>
+                <div class="buttons">
+                    <button id="learning-start">Start Learning</button>
+                    <button id="learning-stop" disabled>Stop</button>
+                </div>
+            </div>
+
+            <div class="section executing">
+                <h2>Executing</h2>
+                <div class="time-display">
+                    <div class="logged-time">Logged: <span id="executing-logged">00:00:00</span></div>
+                    <div class="remaining-time">Remaining: <span id="executing-remaining">01:00:00</span></div>
+                </div>
+                <div class="buttons">
+                    <button id="executing-start">Start Executing</button>
+                    <button id="executing-stop" disabled>Stop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
