@@ -34,3 +34,4 @@ Works on all modern browsers:
 - Chrome
 - Firefox
 - Edge # timer_app
+# Updated by Farhan918
